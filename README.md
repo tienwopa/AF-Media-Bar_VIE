@@ -1,170 +1,169 @@
+> **Bản Việt hóa dựa trên dự án gốc của [Fervent-Tempo](https://github.com/Fervent-Tempo/AF-Media-Bar)**
+
 <p align="center">
-  <img src="docs/assets/readme/hero-zh.svg" width="100%" alt="AF Media Bar 布局示意：媒体栏位于 Windows 任务栏左下角，完整媒体弹窗在其正上方，软件图标与项目介绍位于右侧">
+  <img src="docs/assets/readme/hero-en.svg" width="100%" alt="Minh họa bố cục AF Media Bar: thanh điều khiển phương tiện nằm ở góc dưới bên trái thanh tác vụ Windows, cửa sổ phương tiện đầy đủ nằm ngay phía trên, biểu tượng ứng dụng và phần giới thiệu dự án ở bên phải">
 </p>
 
 <p align="center">
-  <a href="https://github.com/Fervent-Tempo/AF-Media-Bar/releases"><img src="https://img.shields.io/github/v/release/Fervent-Tempo/AF-Media-Bar?style=flat-square" alt="最新版本"></a>
-  <a href="https://github.com/Fervent-Tempo/AF-Media-Bar/releases"><img src="https://img.shields.io/github/downloads/Fervent-Tempo/AF-Media-Bar/total?style=flat-square" alt="下载次数"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/Fervent-Tempo/AF-Media-Bar?style=flat-square" alt="MIT 许可证"></a>
+  <a href="https://github.com/Fervent-Tempo/AF-Media-Bar/releases"><img src="https://img.shields.io/github/v/release/Fervent-Tempo/AF-Media-Bar?style=flat-square" alt="Phiên bản mới nhất"></a>
+  <a href="https://github.com/Fervent-Tempo/AF-Media-Bar/releases"><img src="https://img.shields.io/github/downloads/Fervent-Tempo/AF-Media-Bar/total?style=flat-square" alt="Lượt tải về"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/Fervent-Tempo/AF-Media-Bar?style=flat-square" alt="Giấy phép MIT"></a>
   <br>
-  简体中文 · <a href="README.en-US.md">English</a>
+  Tiếng Việt · <a href="README.en-US.md">English</a> · <a href="https://github.com/Fervent-Tempo/AF-Media-Bar/blob/main/README.md">简体中文</a>
   <br>
-  <a href="#下载安装">下载运行</a> · <a href="#功能一览">功能一览</a> · <a href="https://github.com/Fervent-Tempo/AF-Media-Bar/issues/new?template=bug_report.yml">报告问题</a> · <a href="https://github.com/Fervent-Tempo/AF-Media-Bar/issues/new?template=feature_request.yml">功能建议</a>
+  <a href="#tải-về-và-cài-đặt">Tải về & Cài đặt</a> · <a href="#tính-năng-nổi-bật">Tính năng</a> · <a href="https://github.com/Fervent-Tempo/AF-Media-Bar/issues/new?template=bug_report.yml">Báo lỗi</a> · <a href="https://github.com/Fervent-Tempo/AF-Media-Bar/issues/new?template=feature_request.yml">Đề xuất tính năng</a>
 </p>
 
-AF Media Bar 是一款便携式 Windows 10/11 任务栏媒体控制器。它从系统媒体会话读取正在播放的内容，让封面、歌词、播放控制和音频设备切换留在桌面边缘。
+AF Media Bar là một trình điều khiển phương tiện di động dành cho thanh tác vụ (Taskbar) trên Windows 10/11. Ứng dụng đọc phiên phát phương tiện từ hệ thống để đưa ảnh bìa, lời bài hát, các nút điều khiển phát nhạc và chuyển đổi thiết bị âm thanh trực tiếp ra mép màn hình desktop của bạn.
 
-## 运行演示
+## Trải nghiệm thực tế
 
 <p align="center">
-  <img src="docs/assets/readme/展示.gif" width="100%" alt="AF Media Bar 实际运行演示">
+  <img src="docs/assets/readme/展示.gif" width="100%" alt="Minh họa AF Media Bar đang hoạt động thực tế trên thanh tác vụ Windows">
 </p>
 
-[观看 Bilibili 介绍视频](https://www.bilibili.com/video/BV17yhh6aEgK)
+[Xem video giới thiệu trên Bilibili](https://www.bilibili.com/video/BV17yhh6aEgK)
 
-## 下载安装
+## Tải về và cài đặt
 
-前往 [GitHub Releases](https://github.com/Fervent-Tempo/AF-Media-Bar/releases)，选择一种方式：
+Truy cập [GitHub Releases](https://github.com/Fervent-Tempo/AF-Media-Bar/releases) và lựa chọn một phương thức:
 
-1. **安装程序（推荐）：** 下载 `AFMediaBar-Setup-vX.Y.Z-win-x64.exe`，运行向导并选择语言、安装位置及当前用户/所有用户。默认安装位置为 `%LOCALAPPDATA%\Programs\AFMediaBar`；安装版支持程序内检查、下载与安装更新。
-2. **便携版：** 下载 `AFMediaBar-vX.Y.Z-win-x64.zip`，解压到长期保留且可写的目录（如 `D:\AFMediaBar`），运行其中的 `AFMediaBar.exe`。便携版不写注册表，更新时手动替换文件。
+1. **Bản cài đặt (Khuyên dùng):** Tải về `AFMediaBar-Setup-vX.Y.Z-win-x64.exe`, chạy trình hướng dẫn để chọn ngôn ngữ, vị trí cài đặt và chế độ người dùng hiện tại / tất cả người dùng. Vị trí cài đặt mặc định là `%LOCALAPPDATA%\Programs\AFMediaBar`; phiên bản cài đặt hỗ trợ kiểm tra, tải về và cài đặt cập nhật trực tiếp trong ứng dụng.
+2. **Bản di động (Portable):** Tải về `AFMediaBar-vX.Y.Z-win-x64.zip`, giải nén vào thư mục cố định có quyền ghi (ví dụ: `D:\AFMediaBar`), sau đó chạy tệp `AFMediaBar.exe`. Bản di động không ghi vào Registry; khi cập nhật chỉ cần thay thế các tệp thủ công.
 
-**系统要求：** Windows 10 1809（内部版本 17763）或更新的 x64 系统，并需要 Microsoft Edge WebView2 Runtime。Windows 11 与仍受支持的 Windows 10 通常已预装；精简系统若缺失，需先安装 Evergreen Runtime。两种包都自带 .NET 运行时，不需要另行安装。程序用到的系统接口可在 1809 使用，但 **.NET 10 官方仅支持 Windows 10 的长期服务版与企业版**（1809 E、21H2 E）；消费版 Windows 10 不在 Microsoft 的支持范围内。Windows 11 不受此限制。
+**Yêu cầu hệ thống:** Windows 10 phiên bản 1809 (Build 17763) trở lên phiên bản 64-bit (x64), kèm theo Microsoft Edge WebView2 Runtime. Windows 11 và các bản Windows 10 còn được hỗ trợ thông thường đã được cài sẵn; với các bản Windows rút gọn (Lite) nếu thiếu cần cài đặt Evergreen Runtime trước. Cả hai gói phát hành đều đã tích hợp sẵn .NET Runtime, không cần cài đặt thêm. Các giao diện hệ thống mà ứng dụng sử dụng có sẵn từ bản 1809, tuy nhiên **.NET 10 chính thức chỉ hỗ trợ các phiên bản Windows 10 Kênh dịch vụ dài hạn (LTSC) và Enterprise** (1809 E, 21H2 E); các bản Windows 10 dành cho người dùng cá nhân (Home/Pro) không nằm trong phạm vi hỗ trợ chính thức của Microsoft. Windows 11 hoàn toàn không bị ảnh hưởng bởi giới hạn này.
 
-请下载上述发布包，不要使用 GitHub 自动生成的 Source code 压缩包。程序尚未进行商业代码签名，首次运行时 Windows SmartScreen 可能提示“未知发布者”。
+Vui lòng tải các gói phát hành được nêu ở trên, không tải tệp mã nguồn (Source code) tự động nén của GitHub. Ứng dụng hiện chưa có chữ ký số thương mại nên trong lần chạy đầu tiên, Windows SmartScreen có thể hiển thị cảnh báo "Nhà phát hành không xác định" (Unknown Publisher).
 
+## Tính năng nổi bật
 
-## 功能一览
-
-| 场景 | 可以做什么 |
+| Phân loại | Khả năng đáp ứng |
 | --- | --- |
-| 音乐控制 | 上一首、播放/暂停、下一首、循环；点击或拖动进度条跳转。 |
-| 任务栏歌词 | 由 Web 歌词引擎显示实时歌词，支持译文、音译与双行对齐；按网易云音乐、LRCLIB、QQ 音乐、酷狗音乐、汽水音乐的顺序匹配 |
-| 来源与交互 | 切换媒体会话；封面、标题与歌词的点击操作可分别设为播放/暂停、切回媒体应用或打开完整菜单 |
-| 音频与系统 | 点击或滚轮切换默认输出设备、调整当前媒体应用音量、查看空间音效；提供四种频谱样式与性能检测组件 |
-| 布局与外观 | 自动避让任务栏图标及系统区域，可选目标屏幕、无播放时自动隐藏；可调字体、主题色与窗口材质 |
-| 快捷操作 | 悬停显示控制按钮，完整层展示更多信息；音符图标打开快速启动列表；快速切换输出设备 |
+| Điều khiển phát nhạc | Bài trước, Phát/Tạm dừng, Bài tiếp, Lặp lại; nhấp chuột hoặc kéo thanh tiến trình để tua nhanh/chậm. |
+| Lời bài hát trên thanh tác vụ | Hiển thị lời bài hát thời gian thực thông qua engine lời bài hát Web, hỗ trợ dịch thuật, phiên âm và căn chỉnh hai dòng; tự động tìm kiếm theo thứ tự: NetEase Cloud Music, LRCLIB, QQ Music, Kugou Music, Soda Music |
+| Nguồn phát & Tương tác | Chuyển đổi qua lại giữa các phiên phát phương tiện; hành vi nhấp chuột vào ảnh bìa, tiêu đề và lời bài hát có thể tùy chỉnh độc lập thành Phát/Tạm dừng, chuyển sang ứng dụng phát hoặc mở menu đầy đủ |
+| Âm thanh & Hệ thống | Nhấp chuột hoặc lăn con trỏ để chuyển đổi thiết bị phát mặc định, điều chỉnh âm lượng của ứng dụng phát hiện tại, xem trạng thái âm thanh không gian (Spatial Audio); cung cấp 4 kiểu hiệu ứng sóng âm (Spectrum) và thành phần theo dõi hiệu năng hệ thống |
+| Bố cục & Giao diện | Tự động tránh vùng icon tác vụ và khay hệ thống, tùy chọn màn hình hiển thị, tự động ẩn khi không có nhạc phát; tùy chỉnh phông chữ, màu nhấn (Accent color) và chất liệu cửa sổ |
+| Thao tác nhanh | Di chuột để hiển thị các nút điều khiển, mở lớp chi tiết đầy đủ để xem thêm thông tin; nhấp vào biểu tượng nốt nhạc để mở danh sách khởi động nhanh; chuyển đổi nhanh thiết bị đầu ra âm thanh |
 
-**使用边界：** 只有向 Windows 发布 GSMTC 媒体会话的播放器才会出现；部分播放器需要在自身设置中启用“系统媒体控制”或“媒体键”。当前仅有任务栏运行模式；设置中的灵动岛、桌面卡片、悬浮球是占位选项。
+**Phạm vi và giới hạn:** Chỉ các trình phát phát hành phiên phương tiện GSMTC lên Windows mới xuất hiện; một số trình phát yêu cầu bật tính năng "Điều khiển phương tiện hệ thống" hoặc "Phím đa phương tiện" trong phần cài đặt của chính ứng dụng đó. Hiện tại ứng dụng chỉ có chế độ chạy trên thanh tác vụ (Taskbar); các tùy chọn Dynamic Island, Thẻ trên màn hình nền (Desktop Card) và Bóng nổi (Floating Orb) trong Cài đặt hiện là các mục đang phát triển (placeholder).
 
-## 工作方式
+## Cơ chế hoạt động
 
-AF Media Bar 以独立 WPF 进程运行，将媒体栏挂载为任务栏子窗口。它使用 Windows 的公开 GSMTC 接口读取媒体会话，通过 Core Audio 处理设备与音量，不修改或向 `explorer.exe` 注入代码。
+AF Media Bar hoạt động như một tiến trình WPF độc lập, gắn thanh điều khiển phương tiện làm cửa sổ con của thanh tác vụ Windows. Ứng dụng sử dụng API GSMTC công khai của Windows để đọc phiên phương tiện và Windows Core Audio để xử lý thiết bị cùng mức âm lượng, hoàn toàn không chỉnh sửa hay tiêm mã (inject) vào `explorer.exe`.
 
 ```mermaid
 flowchart LR
-    A[媒体应用] -->|GSMTC 会话| B[AF Media Bar]
-    C[Windows Core Audio] -->|设备与音量| B
-    B --> D[WPF 任务栏子窗口]
+    A[Ứng dụng phát nhạc] -->|Phiên GSMTC| B[AF Media Bar]
+    C[Windows Core Audio] -->|Thiết bị & Âm lượng| B
+    B --> D[Cửa sổ con WPF trên Taskbar]
 ```
 
-网易云音乐、QQ 音乐、Spotify、浏览器等应用只要发布系统媒体会话，就可以被发现和控制。Windows 控制中心的媒体卡片不是公开可嵌入的控件；本项目读取其背后的公开接口并自行渲染任务栏界面。
+Các ứng dụng như NetEase Cloud Music, QQ Music, Spotify, trình duyệt web,... chỉ cần phát hành phiên phương tiện hệ thống là có thể được nhận diện và điều khiển. Thẻ phương tiện trong Trung tâm điều khiển của Windows không phải là một control có thể nhúng trực tiếp; dự án này đọc các API công khai phía sau nó và tự hiển thị giao diện riêng trên thanh tác vụ.
 
-## 更新与卸载
+## Cập nhật và Gỡ cài đặt
 
-### 更新
+### Cập nhật
 
-程序启动约 20 秒后读取公开版本清单（`docs/latest.json`）。发现新版本时：托盘图标弹出一次系统通知，点击直接打开「应用」页。
-便携版没有安装记录，只下载不安装。
+Khoảng 20 giây sau khi khởi động, ứng dụng sẽ đọc danh sách phiên bản công khai (`docs/latest.json`). Khi phát hiện có bản cập nhật mới: biểu tượng khay hệ thống sẽ hiển thị một thông báo hệ thống, nhấp vào sẽ mở thẳng trang «Ứng dụng».
+Bản di động (Portable) không có hồ sơ cài đặt, nên chỉ hỗ trợ tải về chứ không tự cài đặt đè.
 
-安装日志在 `%LOCALAPPDATA%\AFMediaBar\updates\install-<版本>.log`；已下载的安装包放在同一目录，并在下次启动时按版本清理。
+Nhật ký cài đặt được lưu tại `%LOCALAPPDATA%\AFMediaBar\updates\install-<phiên_bản>.log`; tệp cài đặt đã tải về nằm trong cùng thư mục và sẽ được dọn dẹp theo phiên bản trong lần khởi động kế tiếp.
 
-用户偏好与窗口状态保存在 `%LOCALAPPDATA%\AFMediaBar\settings.json`，同一版本内替换程序文件不会丢失设置；「应用」页可打开设置文件夹。
+Cấu hình tùy chọn và trạng thái cửa sổ của người dùng được lưu tại `%LOCALAPPDATA%\AFMediaBar\settings.json`. Việc cập nhật/thay thế tệp chương trình trong cùng một phiên bản sẽ không làm mất cài đặt; bạn có thể mở thư mục cấu hình từ trang «Ứng dụng».
 
-### 卸载
+### Gỡ cài đặt
 
-- 便携版：直接删除程序目录。
-- 安装版：在“设置 > 应用 > 已安装的应用”中卸载，或使用开始菜单的卸载项；卸载只删除程序目录与快捷方式，需要使用下面命令或手动删除 `%LOCALAPPDATA%\AFMediaBar`。
+- Bản di động (Portable): Xóa trực tiếp thư mục chứa chương trình.
+- Bản cài đặt (Installer): Gỡ cài đặt trong phần “Cài đặt > Ứng dụng > Ứng dụng đã cài đặt” của Windows hoặc dùng lối tắt gỡ cài đặt trong Start menu. Thao tác gỡ cài đặt chỉ xóa thư mục chương trình và các phím tắt; nếu muốn xóa sạch toàn bộ dữ liệu cấu hình `%LOCALAPPDATA%\AFMediaBar`, bạn có thể thực hiện thủ công hoặc chạy lệnh sau:
 
 ```powershell
 Remove-Item "$env:LOCALAPPDATA\AFMediaBar" -Recurse -Force
 ```
 
-## 隐私与安全
+## Quyền riêng tư và Bảo mật
 
-- 不包含遥测、广告、账号系统或联网分析代码；媒体信息、系统指标与音量操作全部在本机处理。
-- 更新检查只请求两个公开清单端点（`raw.githubusercontent.com` 与 jsDelivr 上的 `docs/latest.json`）。
-- 歌词按当前媒体信息向上述五个来源的公开接口请求（每个来源只发一次请求，命中即停止）；这些请求只发送曲名、歌手、专辑与时长。
-- 程序以当前用户权限运行，不请求管理员权限。安全问题请按 [SECURITY.md](SECURITY.md) 私下报告。
+- Hoàn toàn không chứa mã thu thập dữ liệu từ xa (telemetry), quảng cáo, hệ thống tài khoản hay phân tích hành vi người dùng; thông tin bài hát, chỉ số hệ thống và các thao tác âm lượng đều được xử lý nội bộ 100% trên máy của bạn.
+- Việc kiểm tra cập nhật chỉ gửi yêu cầu tới hai địa chỉ danh sách công khai (`raw.githubusercontent.com` và jsDelivr tại đường dẫn `docs/latest.json`).
+- Lời bài hát được truy vấn dựa trên thông tin bài hát hiện tại tới các API công khai của năm nguồn trên (mỗi nguồn gửi một yêu cầu duy nhất, dừng lại ngay khi tìm thấy kết quả); các yêu cầu này chỉ gửi tên bài hát, nghệ sĩ, album và thời lượng.
+- Ứng dụng chạy dưới quyền của người dùng hiện tại (Standard User), không yêu cầu quyền Quản trị viên (Administrator). Các vấn đề liên quan đến bảo mật vui lòng báo cáo riêng tư theo hướng dẫn trong [SECURITY.md](SECURITY.md).
 
-## 从源码构建
+## Biên dịch từ mã nguồn
 
-需要 Windows 10 1809 或更高版本、[.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) 和 PowerShell；仓库通过 `global.json` 固定受支持的 SDK 特性带。
+Yêu cầu Windows 10 1809 trở lên, [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) và PowerShell; kho lưu trữ cố định dải tính năng SDK được hỗ trợ thông qua tệp `global.json`.
 
 ```powershell
-git clone https://github.com/Fervent-Tempo/AF-Media-Bar.git
-cd AF-Media-Bar
+git clone https://github.com/tienwopa/AF-Media-Bar_VIE.git
+cd AF-Media-Bar_VIE
 dotnet restore .\src\AFMediaBar.slnx
 dotnet build .\src\AFMediaBar.slnx -c Release --no-restore
 dotnet test .\src\AFMediaBar.slnx -c Release --no-build
 dotnet run --project .\src\AFMediaBar\AFMediaBar.csproj
 ```
 
-生成供普通用户使用的自包含单文件：
+Tạo tệp thực thi đơn lẻ (self-contained single-file) cho người dùng cuối:
 
 ```powershell
 dotnet publish .\src\AFMediaBar\AFMediaBar.csproj -c Release -r win-x64 --self-contained true -o .\artifacts\AFMediaBar-win-x64
 ```
 
-## 项目结构
+## Cấu trúc dự án
 
 ```text
 AF-Media-Bar/
-├── .github/workflows/        # 构建与发布工作流
-├── src/AFMediaBar/           # WPF 应用主项目
-│   ├── Classes/              # 分层业务代码
-│   │   ├── Abstractions/     # 跨模块契约
-│   │   ├── Interop/          # Windows API 互操作
-│   │   ├── Models/           # 数据模型（含布局 schema）
-│   │   ├── Services/         # 按所有权分目录的服务（Media、Lyrics、Audio、Updates…）
-│   │   ├── Settings/         # 设置模型与兼容门面
-│   │   └── Utils/            # 无状态辅助与有界缓存
-│   ├── Components/           # 可复用 WPF 控件
-│   ├── Resources/            # 主题、样式与三语文案
-│   ├── ViewModels/           # MVVM 视图模型
-│   └── Views/                # 页面与宿主窗口
-├── tests/AFMediaBar.Layout.Tests/   # 纯逻辑、策略与设置测试
-├── tools/                    # 架构静态检查等脚本
-├── installer/                # Inno Setup 安装脚本
-└── docs/                     # 项目文档、资源与版本清单
+├── .github/workflows/        # Quy trình build và phát hành (CI/CD workflows)
+├── src/AFMediaBar/           # Dự án ứng dụng WPF chính
+│   ├── Classes/              # Mã nguồn phân tầng nghiệp vụ
+│   │   ├── Abstractions/     # Giao diện và hợp đồng liên mô-đun
+│   │   ├── Interop/          # Tương tác với Windows API (P/Invoke)
+│   │   ├── Models/           # Mô hình dữ liệu (bao gồm schema bố cục)
+│   │   ├── Services/         # Các dịch vụ độc lập theo nghiệp vụ (Media, Lyrics, Audio, Updates…)
+│   │   ├── Settings/         # Mô hình cấu hình và facade tương thích
+│   │   └── Utils/            # Tiện ích không trạng thái và bộ nhớ đệm có giới hạn
+│   ├── Components/           # Các thành phần điều khiển (WPF Controls) tái sử dụng
+│   ├── Resources/            # Giao diện, kiểu dáng và tài nguyên ngôn ngữ
+│   ├── ViewModels/           # Mô hình dạng xem (MVVM ViewModels)
+│   └── Views/                # Các trang giao diện và cửa sổ chứa
+├── tests/AFMediaBar.Layout.Tests/   # Kiểm thử logic, chính sách và cấu hình
+├── tools/                    # Công cụ phân tích tĩnh kiến trúc và script hỗ trợ
+├── installer/                # Kịch bản đóng gói cài đặt Inno Setup
+└── docs/                     # Tài liệu dự án, tài nguyên và danh sách phiên bản
 ```
 
-## 参与贡献
+## Đóng góp
 
-提交问题或代码前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。错误报告请附 Windows 版本、AF Media Bar 版本、媒体播放器与完整复现步骤。版本变化记录见 [CHANGELOG.md](CHANGELOG.md)。
+Vui lòng đọc kỹ [CONTRIBUTING.md](CONTRIBUTING.md) trước khi gửi lỗi hoặc yêu cầu kéo (Pull Request). Báo cáo lỗi xin vui lòng đính kèm phiên bản Windows, phiên bản AF Media Bar, ứng dụng phát nhạc đang dùng và các bước tái hiện chi tiết. Lịch sử thay đổi các phiên bản có thể xem tại [CHANGELOG.md](CHANGELOG.md).
 
+## Lời cảm ơn
 
-## 致谢
+Xin gửi lời cảm ơn chân thành đến tất cả các nhà phát triển đã đóng góp cho dự án.
 
-感谢所有参与贡献的开发者。
-
-感谢以下开源项目：
+Đặc biệt cảm ơn các dự án nguồn mở sau:
 
 - [FluentFlyout](https://github.com/unchihugo/FluentFlyout)
 - [Lyricify-Lyrics-Helper](https://github.com/WXRIW/Lyricify-Lyrics-Helper)
 - [TaskbarLyrics](https://github.com/ANYNC/TaskbarLyrics)
 
+## Giấy phép
 
-## License
-
-AF Media Bar 使用 [MIT License](LICENSE) 开源。
+AF Media Bar được phát hành theo giấy phép nguồn mở [MIT License](LICENSE).
 
 <div align="center">
 
-如果 AF Media Bar 对你有帮助，可以给项目一个 Star❤️。
+Nếu bạn thấy AF Media Bar hữu ích, đừng ngần ngại tặng cho dự án một ngôi sao Star ❤️ nhé!
 
 </div>
 
-## 赞助
+## Tài trợ
 
-请作者喝杯咖啡。**大于 10 元的赞助可以进入赞助者名单，请在备注中留下 id。**
+Mời tác giả gốc một tách cà phê. **Khoản ủng hộ trên 10 Nhân dân tệ có thể được ghi danh vào danh sách nhà tài trợ — vui lòng để lại ID của bạn trong ghi chú thanh toán.**
 
 <div align="center">
 
-| 微信 | 支付宝 |
+| WeChat Pay | Alipay |
 | :---: | :---: |
-| <img src="src/AFMediaBar/Assets/Sponsor/wechat-pay.png" alt="微信收款码" width="220"> | <img src="src/AFMediaBar/Assets/Sponsor/alipay-pay.png" alt="支付宝收款码" width="220"> |
+| <img src="src/AFMediaBar/Assets/Sponsor/wechat-pay.png" alt="Mã thanh toán WeChat" width="220"> | <img src="src/AFMediaBar/Assets/Sponsor/alipay-pay.png" alt="Mã thanh toán Alipay" width="220"> |
 
-爱发电赞助链接：[爱发电](https://ifdian.net/a/amorfate)
+Trang tài trợ Afdian: [Afdian](https://ifdian.net/a/amorfate)
 
 </div>
