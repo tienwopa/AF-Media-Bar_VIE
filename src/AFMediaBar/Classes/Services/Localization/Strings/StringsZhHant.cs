@@ -27,6 +27,7 @@ internal static class StringsZhHant
         table.Add("About.Language.SimplifiedChinese", "简体中文");
         table.Add("About.Language.Title", "介面語言");
         table.Add("About.Language.TraditionalChinese", "繁體中文");
+        table.Add("About.Language.Vietnamese", "越南語");
         table.Add("About.ResetScope", "所有設定");
         table.Add("About.Row.AutoCheck.Description", "啟動約 20 秒後讀取公開版本清單；成功後 24 小時內不再自動檢查，失敗 1 小時後重試。發現新版本時顯示一次系統通知，點擊通知開啟本頁");
         table.Add("About.Row.AutoCheck.Title", "自動檢查更新");

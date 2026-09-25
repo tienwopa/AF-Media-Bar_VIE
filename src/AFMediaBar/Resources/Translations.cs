@@ -72,12 +72,18 @@ public static class Translations
         {
             LocalizationLanguage.TraditionalChinese => text.TraditionalChinese,
             LocalizationLanguage.English => text.English,
+            LocalizationLanguage.Vietnamese => text.Vietnamese,
             _ => text.SimplifiedChinese,
         };
 
         if (!string.IsNullOrEmpty(value))
         {
             return value;
+        }
+
+        if (language == LocalizationLanguage.Vietnamese && !string.IsNullOrEmpty(text.English))
+        {
+            return text.English;
         }
 
         // 某一语言缺这条文案时回退到简体中文，而不是在界面上留下空白；简体中文也缺（只可能来自手写的语言文件不一致）
@@ -128,15 +134,15 @@ public static class Translations
     internal static void RaiseLanguageChanged() => LanguageChanged?.Invoke(null, EventArgs.Empty);
 
     /// <summary>
-    /// 把三份语言文件合并成一张"键 → 三种语言"的表。
+    /// 把多份语言文件合并成一张"键 → 各语言"的表。
     ///
-    /// 键取三份文件的并集并按序排列：只有这样"某一语言漏了一条"才是可表示的（那一份取空值、取值时回退简体中文、
+    /// 键取各份文件的并集并按序排列：只有这样"某一语言漏了一条"才是可表示的（那一份取空值、取值时回退、
     /// 由完整性测试判失败），而不是让静态初始化直接崩掉——崩掉的话用户看到的是程序打不开，而不是少一句翻译。
-    /// 语言文件的键顺序与此处一致（都由键排序），因此同一行号在三份文件里指的是同一条文案。
-    /// Merges the three language files into one "key to three languages" table.
+    /// 语言文件的键顺序与此处一致（都由键排序），因此同一行号在各份文件里指的是同一条文案。
+    /// Merges the language files into one "key to languages" table.
     ///
-    /// The keys are the union of the three files, in order: that is what makes "one language is missing an entry" representable
-    /// — the missing language reads as empty, falls back to simplified Chinese at lookup time, and is failed by the completeness
+    /// The keys are the union of the files, in order: that is what makes "one language is missing an entry" representable
+    /// — the missing language reads as empty, falls back at lookup time, and is failed by the completeness
     /// test — instead of letting static initialization crash, where the user would see an application that does not start rather
     /// than one string that is not translated. The language files carry the same key order as this table (all key-sorted), so the
     /// same line number means the same string in every one of them.
@@ -146,10 +152,12 @@ public static class Translations
         var simplifiedChinese = Build(StringsZhHans.Register);
         var traditionalChinese = Build(StringsZhHant.Register);
         var english = Build(StringsEn.Register);
+        var vietnamese = Build(StringsVi.Register);
 
         var keys = new SortedSet<string>(simplifiedChinese.Keys, StringComparer.Ordinal);
         keys.UnionWith(traditionalChinese.Keys);
         keys.UnionWith(english.Keys);
+        keys.UnionWith(vietnamese.Keys);
 
         var table = new Dictionary<string, LocalizedText>(keys.Count, StringComparer.Ordinal);
         foreach (var key in keys)
@@ -157,7 +165,8 @@ public static class Translations
             table[key] = new LocalizedText(
                 simplifiedChinese.GetValueOrDefault(key, string.Empty),
                 traditionalChinese.GetValueOrDefault(key, string.Empty),
-                english.GetValueOrDefault(key, string.Empty));
+                english.GetValueOrDefault(key, string.Empty),
+                vietnamese.GetValueOrDefault(key, string.Empty));
         }
 
         return table;

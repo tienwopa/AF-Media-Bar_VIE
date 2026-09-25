@@ -22,12 +22,13 @@ public sealed class InterfaceLanguagePolicyTests
     [TestMethod]
     public void AnExplicitChoiceIgnoresTheSystemLanguage()
     {
-        foreach (var culture in new[] { "zh-CN", "zh-TW", "en-US", "ja-JP" })
+        foreach (var culture in new[] { "zh-CN", "zh-TW", "en-US", "ja-JP", "vi-VN" })
         {
             var systemCulture = CultureInfo.GetCultureInfo(culture);
             Assert.AreEqual(LocalizationLanguage.SimplifiedChinese, InterfaceLanguagePolicy.Resolve(InterfaceLanguage.SimplifiedChinese, systemCulture), culture);
             Assert.AreEqual(LocalizationLanguage.TraditionalChinese, InterfaceLanguagePolicy.Resolve(InterfaceLanguage.TraditionalChinese, systemCulture), culture);
             Assert.AreEqual(LocalizationLanguage.English, InterfaceLanguagePolicy.Resolve(InterfaceLanguage.English, systemCulture), culture);
+            Assert.AreEqual(LocalizationLanguage.Vietnamese, InterfaceLanguagePolicy.Resolve(InterfaceLanguage.Vietnamese, systemCulture), culture);
         }
     }
 
@@ -44,9 +45,10 @@ public sealed class InterfaceLanguagePolicyTests
             Assert.AreEqual(LocalizationLanguage.TraditionalChinese, InterfaceLanguagePolicy.ResolveSystem(CultureInfo.GetCultureInfo(culture)), culture);
         }
 
-        // 只带三种语言时，不支持的语言必须回到英文：留空或退回简体中文都会让不懂中文的用户无从下手。
-        // With only three languages available an unsupported one has to fall back to English: a blank interface or a drop to
-        // simplified Chinese would strand a user who reads neither.
+        Assert.AreEqual(LocalizationLanguage.Vietnamese, InterfaceLanguagePolicy.ResolveSystem(CultureInfo.GetCultureInfo("vi-VN")));
+        Assert.AreEqual(LocalizationLanguage.Vietnamese, InterfaceLanguagePolicy.ResolveSystem(CultureInfo.GetCultureInfo("vi")));
+
+        // Chỉ mang các ngôn ngữ hỗ trợ; ngôn ngữ không hỗ trợ phải quay về tiếng Anh
         Assert.AreEqual(LocalizationLanguage.English, InterfaceLanguagePolicy.ResolveSystem(CultureInfo.GetCultureInfo("en-US")));
         Assert.AreEqual(LocalizationLanguage.English, InterfaceLanguagePolicy.ResolveSystem(CultureInfo.GetCultureInfo("ja-JP")));
         Assert.AreEqual(LocalizationLanguage.English, InterfaceLanguagePolicy.ResolveSystem(null));
@@ -66,5 +68,6 @@ public sealed class InterfaceLanguagePolicyTests
         Assert.AreEqual(1, (int)InterfaceLanguage.SimplifiedChinese);
         Assert.AreEqual(2, (int)InterfaceLanguage.TraditionalChinese);
         Assert.AreEqual(3, (int)InterfaceLanguage.English);
+        Assert.AreEqual(4, (int)InterfaceLanguage.Vietnamese);
     }
 }

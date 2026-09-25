@@ -40,12 +40,13 @@ public static class SettingsSearchIndex
     private static LocalizationLanguage _cachedLanguage;
     private static SettingsSearchEntry[]? _cachedEntries;
 
-    /// <summary>三种具体语言，按固定顺序排列：附加关键词时每种语言都要各取一份标题与说明。/ The three concrete languages in a fixed order, because each of them contributes the title and the description as keywords.</summary>
+    /// <summary>全部具体语言，按固定顺序排列：附加关键词时每种语言都要各取一份标题与说明。/ The concrete languages in a fixed order, because each of them contributes the title and the description as keywords.</summary>
     private static readonly LocalizationLanguage[] AllLanguages =
     [
         LocalizationLanguage.SimplifiedChinese,
         LocalizationLanguage.TraditionalChinese,
         LocalizationLanguage.English,
+        LocalizationLanguage.Vietnamese,
     ];
 
     /// <summary>

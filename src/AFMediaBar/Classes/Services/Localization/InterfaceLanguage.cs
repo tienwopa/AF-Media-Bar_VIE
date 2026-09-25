@@ -24,12 +24,15 @@ public enum InterfaceLanguage
 
     /// <summary>英文。/ English.</summary>
     English = 3,
+
+    /// <summary>越南文。/ Vietnamese.</summary>
+    Vietnamese = 4,
 }
 
 /// <summary>
-/// 解析之后实际生效的界面语言。它没有"跟随系统"这一项：设置可以被跟随系统解析，而一个已经生效的语言必然是三者之一。
+/// 解析之后实际生效的界面语言。它没有"跟随系统"这一项：设置可以被跟随系统解析，而一个已经生效的语言必然是具体语言之一。
 /// The interface language actually in effect. It has no "follow the system" member: a setting can follow the system, but a
-/// language in effect is always one of the three concrete ones.
+/// language in effect is always one of the concrete ones.
 /// </summary>
 public enum LocalizationLanguage
 {
@@ -41,4 +44,7 @@ public enum LocalizationLanguage
 
     /// <summary>英文。/ English.</summary>
     English = 2,
+
+    /// <summary>越南文。/ Vietnamese.</summary>
+    Vietnamese = 3,
 }

@@ -1,13 +1,14 @@
 namespace AFMediaBar.Classes.Services.Localization;
 
 /// <summary>
-/// 一条界面文案的三种语言取值。
-/// The three language values of one interface string.
+/// 一条界面文案的四种语言取值。
+/// The four language values of one interface string.
 /// </summary>
 /// <param name="SimplifiedChinese">简体中文文案；缺省时的回退目标。/ Simplified-Chinese text, which is also the fallback.</param>
 /// <param name="TraditionalChinese">繁体中文文案；为空时回退到简体中文。/ Traditional-Chinese text, falling back to simplified Chinese when empty.</param>
 /// <param name="English">英文文案；为空时回退到简体中文。/ English text, falling back to simplified Chinese when empty.</param>
-internal readonly record struct LocalizedText(string SimplifiedChinese, string TraditionalChinese, string English);
+/// <param name="Vietnamese">越南文文案；为空时回退到英文或简体中文。/ Vietnamese text, falling back to English or simplified Chinese when empty.</param>
+internal readonly record struct LocalizedText(string SimplifiedChinese, string TraditionalChinese, string English, string Vietnamese);
 
 /// <summary>
 /// 一种语言的文案登记表：每份语言文件往这里登记"键 → 该语言的文案"。

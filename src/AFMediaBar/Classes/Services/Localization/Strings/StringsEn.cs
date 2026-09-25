@@ -27,6 +27,7 @@ internal static class StringsEn
         table.Add("About.Language.SimplifiedChinese", "简体中文");
         table.Add("About.Language.Title", "Interface language");
         table.Add("About.Language.TraditionalChinese", "繁體中文");
+        table.Add("About.Language.Vietnamese", "Vietnamese");
         table.Add("About.ResetScope", "all settings");
         table.Add("About.Row.AutoCheck.Description", "Reads the public version manifest about 20 seconds after start; after a success it does not check again for 24 hours, and after a failure it retries an hour later. A new version raises one system notification, and clicking the notification opens this page");
         table.Add("About.Row.AutoCheck.Title", "Check for updates automatically");

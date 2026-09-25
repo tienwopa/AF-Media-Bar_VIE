@@ -1,4 +1,4 @@
-﻿; AF Media Bar 安装脚本 / AF Media Bar installer script
+; AF Media Bar 安装脚本 / AF Media Bar installer script
 ;
 ; 构建入口：installer\build-installer.ps1（本地与 CI 共用）。
 ; 版本号必须由外部传入，避免出现"安装包版本与程序集版本不一致"的静默错误。
@@ -31,6 +31,10 @@
 ; against a pinned SHA-256. The cache ships with the repository, so a bare ISCC invocation can use the default below as it is.
 #ifndef ChineseMessagesFile
   #define ChineseMessagesFile "languages\ChineseSimplified.isl"
+#endif
+
+#ifndef VietnameseMessagesFile
+  #define VietnameseMessagesFile "languages\Vietnamese.isl"
 #endif
 
 #define MyAppName "AF Media Bar"
@@ -113,6 +117,7 @@ SetupLogging=yes
 ; at the Simplified Chinese messages file (see the note at the top of this file for its path). An earlier version pointed
 ; the Chinese entry at Default.isl as well, so every built-in string (buttons, page titles, task and icon descriptions)
 ; came out in English inside the "Chinese" wizard.
+Name: "vietnamese"; MessagesFile: "{#VietnameseMessagesFile}"
 Name: "chinesesimplified"; MessagesFile: "{#ChineseMessagesFile}"
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
